@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  --yellow: hsl(47, 88%, 63%);
+  --white: hsl(0, 0%, 100%);
+  --gray-500: hsl(0, 0%, 42%);
+  --gray-950: hsl(0, 0%, 7%);
+  --h1: 24px;
+  --base-text: 16px;
+  --text: 14px;
+  --mt-24: 24px;
+  --mt-12: 12px;
+  --font: "Figtree", sans-serif;
+}
+
+body {
+  background-color: var(--yellow);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 335px;
+  padding: 24px;
+  background-color: var(--white);
+  border-radius: 20px;
+  border: 1px solid var(--gray-950);
+  filter: drop-shadow(black 8px 8px);
+}
+
+.blog__image {
+  height: 200px;
+  border-radius: 10px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--mt-24);
+  font-family: var(--font);
+}
+
+.content__category {
+  width: 58px;
+  padding: 4px 12px;
+  background-color: var(--yellow);
+  border-radius: 4px;
+  font-weight: 800;
+  font-size: var(--text);
+  color: var(--gray-950);
+}
+
+.content__published-date {
+  margin-top: var(--mt-12);
+  font-size: var(--text);
+  color: var(--gray-950);
+}
+
+.content__title {
+  margin-top: var(--mt-12);
+  font-size: var(--h1);
+  color: var(--gray-950);
+  font-weight: 800;
+}
+
+.content__title a:hover {
+  color: var(--yellow);
+  cursor: pointer;
+}
+
+.content__description {
+  margin-top: var(--mt-12);
+  font-size: var(--base-text);
+  color: var(--gray-500);
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  margin-top: var(--mt-24);
+}
+
+.author__img {
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+}
+
+.author__name {
+  font-size: var(--text);
+  color: var(--gray-950);
+  font-weight: 800;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 279px;
+    padding: 24px;
+  }
+
+  .blog__image {
+    width: 279px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+}
